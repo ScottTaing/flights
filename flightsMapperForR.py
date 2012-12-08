@@ -23,7 +23,7 @@ def compareTime(record, startTime, endTime, dest):
     #log.info("Comparison starting time %d and endtime %d", startTime,endTime)
     if( startTime >= start and endTime <= end and tokenizedRecord[1] == dest):
         #printing out the record for the reducer with key as destination
-        print '%s\t%s' %(tokenizedRecord[1], json.dumps(tokenizedRecord))
+        print '%s' %(tokenizedRecord)
         return True
     else:
         return False
