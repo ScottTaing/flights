@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import time
 import sys
 import logging as log
@@ -49,8 +50,5 @@ def testFromCmdLine():
     else:
         log.info ("usage python flights.py <starttime> <endtime> dest")
 
-
-
-if __name__ == '__main__':
-    testFromCmdLine()
-    #readRecord()
+for record in sys.stdin:
+    compareTime(record, 1304622575112, 1304883936090, 'KOA')
